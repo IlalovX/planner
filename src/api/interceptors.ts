@@ -33,7 +33,7 @@ axiosWithAuth.interceptors.response.use(
 		if (
 			(error?.response?.status === 401 ||
 				errorCath(error) === 'jwt expired' ||
-				errorCath(error) === 'jwt muset be provided') &&
+				errorCath(error) === 'jwt must be provided') &&
 			error.config &&
 			!error.config._isRetry
 		) {

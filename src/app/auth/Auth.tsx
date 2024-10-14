@@ -25,7 +25,7 @@ export function Auth() {
 		mutationFn: (data: IAuthForm) =>
 			authService.main(isLoginForm ? 'login' : 'register', data),
 		onSuccess() {
-			toast.success('Succesfully login!')
+			toast.success('Successfully login!')
 			reset()
 			push(DASHBOARD_PAGES.HOME)
 		}
@@ -59,7 +59,6 @@ export function Auth() {
 					extra='mb-4'
 				/>
 				<div className='flex items-center gap-5 justify-center'>
-					{/* btns */}
 					<UIButton onClick={() => setIsLoginForm(true)}>Login</UIButton>
 					<UIButton onClick={() => setIsLoginForm(false)}>Register</UIButton>
 				</div>
